@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" package="es.antonio.m3u.sampleaes.tv" platformBuildVersionCode="35" platformBuildVersionName="15">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-feature android:name="android.software.leanback" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <permission android:name="es.antonio.m3u.sampleaes.tv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="es.antonio.m3u.sampleaes.tv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@drawable/banner" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/ic_launcher" android:label="CHDTV" android:name="es.antonio.m3u.ChdtvApplication" android:roundIcon="@mipmap/ic_launcher" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <provider android:authorities="es.antonio.m3u.sampleaes.tv.backups" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/backup_paths"/>
+        </provider>
+        <service android:exported="false" android:foregroundServiceType="dataSync" android:name="es.antonio.m3u.RecordingService"/>
+        <receiver android:exported="false" android:name="es.antonio.m3u.RecordingReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="es.antonio.m3u.RecordingsActivity"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="es.antonio.m3u.DaznLoginActivity"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="es.antonio.m3u.DaznTokenActivity"/>
+        <service android:exported="true" android:name="es.antonio.m3u.DaznTokenJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="es.antonio.m3u.CdnTokenJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="es.antonio.m3u.CdnTokenActivity"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="es.antonio.m3u.TimedAccessActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="es.antonio.m3u.BackupActivity"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="es.antonio.m3u.PlexActivity"/>
+        <activity android:exported="false" android:name="es.antonio.m3u.EpgActivity"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="es.antonio.m3u.PlayerActivity" android:resizeableActivity="true" android:supportsPictureInPicture="true"/>
+        <activity android:banner="@drawable/banner" android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:icon="@mipmap/ic_launcher" android:label="CHDTV" android:name="es.antonio.m3u.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="es.antonio.m3u.BlackBoxActivity"/>
+    </application>
+</manifest>

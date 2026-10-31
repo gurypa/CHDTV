@@ -1,0 +1,7 @@
+This experimental application includes a locally adapted iori-ssa 0.2.1.
+Original project: https://github.com/iori-rs/iori
+Revision: c65ff97cbe28ab785405f24a0a6ae9724fad0cb2
+Original author: Yesterday17 <mmf@mmf.moe>
+License: Apache License 2.0, preserved in vendor/iori-ssa/LICENSE.
+Local changes: propagate MPEG-TS reader errors; omit standalone benchmark configuration.
+The JNI boundary, HLS adapter and Android TV harness are separate lab code.
