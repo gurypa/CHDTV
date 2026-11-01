@@ -1,0 +1,34 @@
+package com.google.common.net;
+
+import com.google.common.escape.Escaper;
+
+/* JADX INFO: loaded from: classes.dex */
+@ElementTypesAreNonnullByDefault
+public final class UrlEscapers {
+    private static final Escaper URL_FORM_PARAMETER_ESCAPER = null;
+    static final String URL_FORM_PARAMETER_OTHER_SAFE_CHARS = "-_.*";
+    private static final Escaper URL_FRAGMENT_ESCAPER = null;
+    static final String URL_PATH_OTHER_SAFE_CHARS_LACKING_PLUS = "-._~!$'()*,;&=@:";
+    private static final Escaper URL_PATH_SEGMENT_ESCAPER = null;
+
+    static {
+        URL_FORM_PARAMETER_ESCAPER = new PercentEscaper(URL_FORM_PARAMETER_OTHER_SAFE_CHARS, true);
+        URL_PATH_SEGMENT_ESCAPER = new PercentEscaper("-._~!$'()*,;&=@:+", false);
+        URL_FRAGMENT_ESCAPER = new PercentEscaper("-._~!$'()*,;&=@:+/?", false);
+    }
+
+    private UrlEscapers() {
+    }
+
+    public static Escaper urlFormParameterEscaper() {
+        return URL_FORM_PARAMETER_ESCAPER;
+    }
+
+    public static Escaper urlFragmentEscaper() {
+        return URL_FRAGMENT_ESCAPER;
+    }
+
+    public static Escaper urlPathSegmentEscaper() {
+        return URL_PATH_SEGMENT_ESCAPER;
+    }
+}
