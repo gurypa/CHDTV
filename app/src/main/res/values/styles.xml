@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#ff101820</item>
+        <item name="android:alertDialogTheme">@style/ChdtvDialog</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#ff39d5e5</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="AppThemeBlack" parent="@style/AppTheme">
+        <item name="android:windowBackground">#ff080808</item>
+        <item name="android:alertDialogTheme">@style/ChdtvDialogBlack</item>
+        <item name="android:colorAccent">#ffe5e5e5</item>
+    </style>
+    <style name="AppThemeCine" parent="@style/AppTheme">
+        <item name="android:windowBackground">#ff090c0b</item>
+        <item name="android:alertDialogTheme">@style/ChdtvDialogCine</item>
+        <item name="android:colorAccent">#ffaedb29</item>
+    </style>
+    <style name="AppThemeCineBlack" parent="@style/AppThemeCine">
+        <item name="android:windowBackground">#ff080808</item>
+        <item name="android:alertDialogTheme">@style/ChdtvDialogBlack</item>
+        <item name="android:colorAccent">#ffe6e6e6</item>
+    </style>
+    <style name="AppThemeCineBlue" parent="@style/AppThemeCine">
+        <item name="android:windowBackground">#ff09131f</item>
+        <item name="android:alertDialogTheme">@style/ChdtvDialog</item>
+        <item name="android:colorAccent">#ff39d5e5</item>
+    </style>
+    <style name="AppThemeCineGreen" parent="@style/AppThemeCine">
+        <item name="android:alertDialogTheme">@style/ChdtvDialogGreen</item>
+        <item name="android:colorAccent">#ff39e584</item>
+    </style>
+    <style name="AppThemeCineRed" parent="@style/AppThemeCine">
+        <item name="android:alertDialogTheme">@style/ChdtvDialogRed</item>
+        <item name="android:colorAccent">#ffff7180</item>
+    </style>
+    <style name="AppThemeGreen" parent="@style/AppTheme">
+        <item name="android:windowBackground">#ff102017</item>
+        <item name="android:alertDialogTheme">@style/ChdtvDialogGreen</item>
+        <item name="android:colorAccent">#ff39e584</item>
+    </style>
+    <style name="AppThemeRed" parent="@style/AppTheme">
+        <item name="android:windowBackground">#ff201010</item>
+        <item name="android:alertDialogTheme">@style/ChdtvDialogRed</item>
+        <item name="android:colorAccent">#ffe53939</item>
+    </style>
+    <style name="ChdtvDialog" parent="@android:style/Theme.Material.Dialog.Alert">
+        <item name="android:colorBackground">#ec102d48</item>
+        <item name="android:backgroundDimAmount">0.35</item>
+        <item name="android:textColorPrimary">#ffedf7ff</item>
+        <item name="android:textColorSecondary">#ffa9c2d9</item>
+        <item name="android:windowBackground">@drawable/dialog_blue</item>
+        <item name="android:windowMinWidthMajor">65.0%</item>
+        <item name="android:windowMinWidthMinor">91.99999%</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorControlHighlight">#603586ac</item>
+        <item name="android:colorAccent">#ff55ddf0</item>
+        <item name="android:windowElevation">16.0dip</item>
+    </style>
+    <style name="ChdtvDialogBlack" parent="@style/ChdtvDialog">
+        <item name="android:colorBackground">#ec121212</item>
+        <item name="android:textColorPrimary">#ffedf7ff</item>
+        <item name="android:textColorSecondary">#ffd9d9d9</item>
+        <item name="android:windowBackground">@drawable/dialog_black</item>
+        <item name="android:colorControlHighlight">#60acacac</item>
+        <item name="android:colorAccent">#ffe6e6e6</item>
+    </style>
+    <style name="ChdtvDialogCine" parent="@style/ChdtvDialog">
+        <item name="android:colorBackground">#f0171d16</item>
+        <item name="android:textColorPrimary">#fff4f6ed</item>
+        <item name="android:textColorSecondary">#ffbdc7b5</item>
+        <item name="android:windowBackground">@drawable/dialog_cine</item>
+        <item name="android:colorControlHighlight">#6082a921</item>
+        <item name="android:colorAccent">#ffaedb29</item>
+    </style>
+    <style name="ChdtvDialogGreen" parent="@style/ChdtvDialog">
+        <item name="android:colorBackground">#ec104828</item>
+        <item name="android:textColorPrimary">#ffedf7ff</item>
+        <item name="android:textColorSecondary">#ffa9d9be</item>
+        <item name="android:windowBackground">@drawable/dialog_green</item>
+        <item name="android:colorControlHighlight">#6035ac69</item>
+        <item name="android:colorAccent">#ff55f098</item>
+    </style>
+    <style name="ChdtvDialogRed" parent="@style/ChdtvDialog">
+        <item name="android:colorBackground">#ec481010</item>
+        <item name="android:textColorPrimary">#ffedf7ff</item>
+        <item name="android:textColorSecondary">#ffd9a9a9</item>
+        <item name="android:windowBackground">@drawable/dialog_red</item>
+        <item name="android:colorControlHighlight">#60ac3535</item>
+        <item name="android:colorAccent">#fff05555</item>
+    </style>
+    <style name="ExoMediaButton">
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:layout_width">@dimen/exo_media_button_width</item>
+        <item name="android:layout_height">@dimen/exo_media_button_height</item>
+    </style>
+    <style name="ExoMediaButton.FastForward" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_fastforward</item>
+        <item name="android:contentDescription">@string/exo_controls_fastforward_description</item>
+    </style>
+    <style name="ExoMediaButton.Next" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_next</item>
+        <item name="android:contentDescription">@string/exo_controls_next_description</item>
+    </style>
+    <style name="ExoMediaButton.Pause" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_pause</item>
+        <item name="android:contentDescription">@string/exo_controls_pause_description</item>
+    </style>
+    <style name="ExoMediaButton.Play" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_play</item>
+        <item name="android:contentDescription">@string/exo_controls_play_description</item>
+    </style>
+    <style name="ExoMediaButton.Previous" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_previous</item>
+        <item name="android:contentDescription">@string/exo_controls_previous_description</item>
+    </style>
+    <style name="ExoMediaButton.Rewind" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_rewind</item>
+        <item name="android:contentDescription">@string/exo_controls_rewind_description</item>
+    </style>
+    <style name="ExoMediaButton.VR" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_vr</item>
+        <item name="android:contentDescription">@string/exo_controls_vr_description</item>
+    </style>
+    <style name="ExoStyledControls" />
+    <style name="ExoStyledControls.Button" parent="@style/ExoStyledControls">
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:layout_marginLeft">@dimen/exo_icon_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/exo_icon_horizontal_margin</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom" parent="@style/ExoStyledControls.Button">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingLeft">@dimen/exo_small_icon_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/exo_small_icon_padding_vertical</item>
+        <item name="android:paddingRight">@dimen/exo_small_icon_padding_horizontal</item>
+        <item name="android:paddingBottom">@dimen/exo_small_icon_padding_vertical</item>
+        <item name="android:layout_width">@dimen/exo_small_icon_width</item>
+        <item name="android:layout_height">@dimen/exo_small_icon_height</item>
+        <item name="android:layout_marginLeft">@dimen/exo_small_icon_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/exo_small_icon_horizontal_margin</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.AudioTrack" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_audiotrack</item>
+        <item name="android:contentDescription">@string/exo_track_selection_title_audio</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.CC" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_subtitle_off</item>
+        <item name="android:contentDescription">@string/exo_controls_cc_disabled_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.FullScreen" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_fullscreen_enter</item>
+        <item name="android:contentDescription">@string/exo_controls_fullscreen_enter_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.OverflowHide" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_overflow_hide</item>
+        <item name="android:contentDescription">@string/exo_controls_overflow_hide_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.OverflowShow" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_overflow_show</item>
+        <item name="android:contentDescription">@string/exo_controls_overflow_show_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.PlaybackSpeed" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_speed</item>
+        <item name="android:contentDescription">@string/exo_controls_playback_speed</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.RepeatToggle" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_repeat_off</item>
+        <item name="android:contentDescription">@string/exo_controls_repeat_off_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.Settings" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_settings</item>
+        <item name="android:contentDescription">@string/exo_controls_settings_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.Shuffle" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_shuffle_off</item>
+        <item name="android:contentDescription">@string/exo_controls_shuffle_off_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.VR" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_vr</item>
+        <item name="android:contentDescription">@string/exo_controls_vr_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Center" parent="@style/ExoStyledControls.Button">
+        <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+        <item name="android:layout_width">@dimen/exo_icon_size</item>
+        <item name="android:layout_height">@dimen/exo_icon_size</item>
+    </style>
+    <style name="ExoStyledControls.Button.Center.FfwdWithAmount" parent="@style/ExoStyledControls.Button.Center">
+        <item name="android:textSize">@dimen/exo_icon_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/exo_white</item>
+        <item name="android:gravity">center|bottom</item>
+        <item name="android:paddingLeft">0.0dip</item>
+        <item name="android:paddingRight">0.0dip</item>
+        <item name="android:paddingBottom">@dimen/exo_icon_padding_bottom</item>
+        <item name="android:foreground">@drawable/exo_styled_controls_fastforward</item>
+        <item name="android:insetBottom">0.0dip</item>
+        <item name="backgroundTint">@color/exo_white</item>
+    </style>
+    <style name="ExoStyledControls.Button.Center.Next" parent="@style/ExoStyledControls.Button.Center">
+        <item name="android:padding">@dimen/exo_icon_padding</item>
+        <item name="android:src">@drawable/exo_styled_controls_next</item>
+        <item name="android:contentDescription">@string/exo_controls_next_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Center.PlayPause" parent="@style/ExoStyledControls.Button.Center">
+        <item name="android:padding">@dimen/exo_icon_padding</item>
+        <item name="android:src">@drawable/exo_styled_controls_play</item>
+        <item name="android:contentDescription">@string/exo_controls_play_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Center.Previous" parent="@style/ExoStyledControls.Button.Center">
+        <item name="android:padding">@dimen/exo_icon_padding</item>
+        <item name="android:src">@drawable/exo_styled_controls_previous</item>
+        <item name="android:contentDescription">@string/exo_controls_previous_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Center.RewWithAmount" parent="@style/ExoStyledControls.Button.Center">
+        <item name="android:textSize">@dimen/exo_icon_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/exo_white</item>
+        <item name="android:gravity">center|bottom</item>
+        <item name="android:paddingLeft">0.0dip</item>
+        <item name="android:paddingRight">0.0dip</item>
+        <item name="android:paddingBottom">@dimen/exo_icon_padding_bottom</item>
+        <item name="android:foreground">@drawable/exo_styled_controls_rewind</item>
+        <item name="android:insetBottom">0.0dip</item>
+        <item name="backgroundTint">@color/exo_white</item>
+    </style>
+    <style name="ExoStyledControls.TimeBar" parent="@style/ExoStyledControls">
+        <item name="android:layout_height">@dimen/exo_styled_progress_layout_height</item>
+        <item name="bar_gravity">bottom</item>
+        <item name="bar_height">@dimen/exo_styled_progress_bar_height</item>
+        <item name="scrubber_dragged_size">@dimen/exo_styled_progress_dragged_thumb_size</item>
+        <item name="scrubber_enabled_size">@dimen/exo_styled_progress_enabled_thumb_size</item>
+        <item name="touch_target_height">@dimen/exo_styled_progress_touch_target_height</item>
+    </style>
+    <style name="ExoStyledControls.TimeText" parent="@style/ExoStyledControls">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingLeft">4.0dip</item>
+        <item name="android:paddingRight">4.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="ExoStyledControls.TimeText.Duration" parent="@style/ExoStyledControls.TimeText">
+        <item name="android:textColor">@color/exo_white_opacity_70</item>
+        <item name="android:text">@string/exo_controls_time_placeholder</item>
+    </style>
+    <style name="ExoStyledControls.TimeText.Position" parent="@style/ExoStyledControls.TimeText">
+        <item name="android:textColor">@color/exo_white</item>
+        <item name="android:text">@string/exo_controls_time_placeholder</item>
+    </style>
+    <style name="ExoStyledControls.TimeText.Separator" parent="@style/ExoStyledControls.TimeText">
+        <item name="android:textColor">@color/exo_white_opacity_70</item>
+        <item name="android:text">·</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification" parent="@android:style/TextAppearance.Material.Notification" />
+    <style name="TextAppearance.Compat.Notification.Info" parent="@android:style/TextAppearance.Material.Notification.Info" />
+    <style name="TextAppearance.Compat.Notification.Info.Media" parent="@style/TextAppearance.Compat.Notification.Info">
+        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Line2" parent="@style/TextAppearance.Compat.Notification.Info" />
+    <style name="TextAppearance.Compat.Notification.Line2.Media" parent="@style/TextAppearance.Compat.Notification.Info.Media" />
+    <style name="TextAppearance.Compat.Notification.Media" parent="@style/TextAppearance.Compat.Notification">
+        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Time" parent="@android:style/TextAppearance.Material.Notification.Time" />
+    <style name="TextAppearance.Compat.Notification.Time.Media" parent="@style/TextAppearance.Compat.Notification.Time">
+        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.Material.Notification.Title" />
+    <style name="TextAppearance.Compat.Notification.Title.Media" parent="@style/TextAppearance.Compat.Notification.Title">
+        <item name="android:textColor">@color/primary_text_default_material_dark</item>
+    </style>
+    <style name="Widget.Compat.NotificationActionContainer" parent="">
+        <item name="android:background">@drawable/notification_action_background</item>
+    </style>
+    <style name="Widget.Compat.NotificationActionText" parent="">
+        <item name="android:textAppearance">?android:textAppearanceButton</item>
+        <item name="android:textSize">@dimen/notification_action_text_size</item>
+        <item name="android:textColor">@color/androidx_core_secondary_text_default_material_light</item>
+    </style>
+</resources>
